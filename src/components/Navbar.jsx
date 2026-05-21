@@ -7,7 +7,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  // { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -33,10 +33,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a
           href="#home"
-          className="flex items-center space-x-2 text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"
+          className="flex items-center space-x-2 text-xl font-bold tracking-wider text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400"
         >
           <Terminal className="text-cyan-400 w-6 h-6" />
-          <span>DEV.CORE</span>
+          <span>ARPITA.HALVI</span>
         </a>
 
         {/* Desktop Nav */}
@@ -48,15 +48,15 @@ export default function Navbar() {
               className="text-gray-300 hover:text-cyan-400 transition-colors text-sm font-medium relative group"
             >
               {link.name}
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a
+          {/* <a
             href="#contact"
-            className="px-4 py-2 rounded-md bg-gradient-to-r from-blue-600 to-cyan-600 text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
+            className="px-4 py-2 rounded-md bg-linear-to-r from-blue-600 to-cyan-600 text-sm font-medium hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
           >
             Hire Me
-          </a>
+          </a> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -77,7 +77,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#121225] border-b border-white/10"
+            className="md:hidden bg-card-dark border-b border-white/10"
           >
             <div className="px-4 pt-2 pb-6 space-y-3">
               {navLinks.map((link) => (
@@ -90,13 +90,13 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <a
+              {/* <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center px-4 py-2.5 rounded-md bg-gradient-to-r from-blue-600 to-cyan-600 text-sm font-medium"
+                className="block w-full text-center px-4 py-2.5 rounded-md bg-linear-to-r from-blue-600 to-cyan-600 text-sm font-medium"
               >
                 Hire Me
-              </a>
+              </a> */}
             </div>
           </motion.div>
         )}

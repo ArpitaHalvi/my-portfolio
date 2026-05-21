@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Stats from "./components/Stats";
+// import Stats from "./components/Stats";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
@@ -19,13 +19,13 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
+        {/* <Stats /> */}
         <Skills />
         <Projects />
         <Experience />
-        <Clients />
-        <Certifications />
-        <Contact />
+        {/* <Clients /> */}
+        {/* <Certifications /> */}
+        {/* <Contact /> */}
       </main>
       <Footer />
     </div>

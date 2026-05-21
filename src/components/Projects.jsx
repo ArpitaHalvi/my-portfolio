@@ -5,30 +5,48 @@ import { ExternalLink, Layers, X, ChevronRight } from "lucide-react";
 const mockProjects = [
   {
     id: 1,
-    title: "SaaS Multi-Tenant Cloud ERP",
+    title: "French Course Website",
     description:
-      "Enterprise-grade micro-tenant architecture built for handling high concurrency scale distributions securely.",
-    tags: ["React", "Next.js", "Tailwind CSS", "PostgreSQL"],
+      "MERN stack based French course website with authentication, enrollment, and feedback systems.",
+    tags: ["React", "Node.js", "Express", "SCSS", "MongoDB"],
     heroImage:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377070/Intro_k0mnnf.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377065/Oympiad_ott4sx.png",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377113/homepage-1_ekjduj.jpg",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377259/AboutPage-1_ajcodu.jpg",
     ],
+    live: "https://foreign-language-program.vercel.app/",
   },
   {
     id: 2,
-    title: "DeFi High-Frequency Terminal",
+    title: "Starial Website",
     description:
-      "Real-time liquidity pooling dashboard tracking asset streams across cryptographic decentralized ecosystems.",
-    tags: ["React Native", "Expo", "Tailwind", "D3.js"],
+      "Built and developed Starial’s responsive web platform with modern UI design, API integration, and full-stack functionality using modern web technologies.",
+    tags: ["React JS", "Express", "Node.js", "MongoDB"],
     heroImage:
-      "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779378329/Screenshot_2026-05-21_205734_wtt7gz.png",
     gallery: [
-      "https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377866/starial-home-1png_i5gyhu.png",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377901/starial-home-2_grdhwx.png",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779377838/starial-home-3_mfug3i.png",
     ],
+    live: "https://starial.in/",
+  },
+  {
+    id: 3,
+    title: "Vipprow Landing Page",
+    description:
+      "Designed and developed Vipprow’s modern landing page, including a responsive contact section, Google Reviews integration, and user-focused interface components.",
+    tags: ["React JS", "Express", "Node.js", "MongoDB"],
+    heroImage:
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779379774/Screenshot_2026-05-21_212720_wujsp9.png",
+    gallery: [
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779379776/Screenshot_2026-05-21_212931_vebnbz.png",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779379731/Screenshot_2026-05-21_212839_spgdak.png",
+      "https://res.cloudinary.com/dgt8utaaa/image/upload/v1779380710/Screenshot_2026-05-21_212849_qmxy4w.png",
+    ],
+    live: "https://portfolio.vipprow.com/",
   },
 ];
 
@@ -44,7 +62,7 @@ export default function Projects() {
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4">
           Production Deployments
         </h2>
-        <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full" />
+        <div className="w-16 h-1 bg-linear-to-r from-blue-500 to-cyan-500 mx-auto rounded-full" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -54,22 +72,23 @@ export default function Projects() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-[#121225]/40 border border-white/5 rounded-2xl overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col"
+            className="bg-card-dark/40 border border-white/5 rounded-2xl overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col"
           >
             <div className="relative overflow-hidden aspect-video">
               <img
                 src={project.heroImage}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-linear-to-t from-bg-dark via-transparent to-transparent opacity-80" />
             </div>
 
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col grow">
               <h3 className="text-2xl font-bold mb-3 text-gray-100 group-hover:text-cyan-400 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
+              <p className="text-gray-400 text-sm mb-6 grow leading-relaxed">
                 {project.description}
               </p>
 
@@ -93,7 +112,7 @@ export default function Projects() {
                   <span>View Blueprints</span>
                 </button>
                 <a
-                  href="#live"
+                  href={project.live}
                   className="p-2.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 text-blue-400 transition-colors"
                 >
                   <ExternalLink size={18} />

@@ -16,7 +16,7 @@ export default function Hero() {
           className="inline-flex items-center space-x-2 px-3 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs sm:text-sm font-mono tracking-wider"
         >
           <Cpu size={16} className="animate-pulse" />
-          <span>READY FOR DEPLOYMENT // 2026</span>
+          <span>SYSTEM ONLINE // BUILDING THE FUTURE</span>
         </motion.div>
 
         {/* Animated Heading */}
@@ -26,9 +26,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6"
         >
-          Engineering Scalable <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 drop-shadow-sm">
-            Digital Architecture
+          Transforming Ideas into
+          <br />
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-indigo-400 to-cyan-400 drop-shadow-sm">
+            Powerful Software Solutions
           </span>
         </motion.h1>
 
@@ -39,9 +40,11 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-2xl mx-auto text-gray-400 text-base sm:text-xl mb-10 leading-relaxed"
         >
-          I am a Full-Stack Software Developer building highly
-          performance-optimized web systems, interactive user interfaces, and
-          robust multi-tenant cloud ecosystems.
+          I am a full-stack software developer with a strong focus on creating
+          high-performance web and mobile applications. Experienced in
+          technologies like React, Next.js, Node.js, MongoDB, and modern
+          frontend ecosystems, I build scalable and user-centric digital
+          solutions.
         </motion.p>
 
         {/* CTA Actions */}
@@ -53,7 +56,7 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium shadow-lg shadow-blue-500/20 hover:shadow-cyan-500/20 transition-all duration-300 flex items-center justify-center space-x-2 group"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-linear-to-r from-blue-600 to-cyan-600 text-white font-medium shadow-lg shadow-blue-500/20 hover:shadow-cyan-500/20 transition-all duration-300 flex items-center justify-center space-x-2 group"
           >
             <span>Explore Projects</span>
             <ArrowUpRight
@@ -61,13 +64,13 @@ export default function Hero() {
               className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
             />
           </a>
-          <a
+          {/* <a
             href="#contact"
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-gray-200 font-medium hover:bg-white/10 transition-colors flex items-center justify-center space-x-2"
           >
             <Code size={18} />
             <span>Contact Core</span>
-          </a>
+          </a> */}
         </motion.div>
       </div>
 
@@ -75,12 +78,12 @@ export default function Hero() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        className="absolute w-[500px] h-[500px] border border-white/5 rounded-full pointer-events-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute w-125 h-125 border border-white/5 rounded-full pointer-events-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="absolute w-[700px] h-[700px] border border-dashed border-white/5 rounded-full pointer-events-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute w-175 h-175 border border-dashed border-white/5 rounded-full pointer-events-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
     </section>
   );

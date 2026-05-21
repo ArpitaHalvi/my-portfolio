@@ -5,7 +5,15 @@ const positions = [
   {
     role: "Software Developer",
     company: "Vipprow",
-    period: "2026 - Present",
+    period: "March 2026 - Present",
+    tags: [
+      "Next.js",
+      "React JS",
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
     details:
       "I have successfully created four landing pages from scratch, each designed with a focus on responsive layouts, modern UI/UX practices, and performance optimization. Additionally, I collaborated with another team member to build a full website, contributing to both the front-end architecture and integration of dynamic features.Beyond web development, I also developed a mobile application using React Native with Expo CLI, ensuring cross-platform compatibility, smooth navigation, and an intuitive user interface. This project highlights my ability to work across both web and mobile ecosystems, leveraging modern frameworks to deliver scalable solutions.",
   },
@@ -14,26 +22,28 @@ const positions = [
     company: "Starial",
     period: "June 2025 - Oct 2025",
     details:
-      "Engineered responsive frontend microservices with React.js, Tailwind CSS, and optimized database caching rules across PostgreSQL instances.",
+      "Developed the complete mobile application UI for Starial using Flutter, focusing on responsive design, smooth user experience, and modern interface architecture. Integrated REST APIs for dynamic data handling and implemented reusable components to ensure scalability and maintainability. Collaborated on creating high-performance mobile screens with clean state management and optimized frontend workflows.",
+    tags: ["Flutter", "MySQL"],
   },
   {
     role: "Full-Stack Web Development Intern",
     company: "Starial",
     period: "March 2025 - May 2025",
     details:
-      "Engineered responsive frontend microservices with React.js, Tailwind CSS, and optimized database caching rules across PostgreSQL instances.",
+      "Worked on the development of Starial’s web platform by building responsive and modern user interfaces along with backend integration. Developed scalable frontend components, integrated APIs, and contributed to creating a seamless user experience across the application. Gained hands-on experience in full-stack development, database connectivity, and optimizing application performance using modern web technologies.",
+    tags: ["React JS", "Node.js", "Express", "MongoDB"],
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-[#121225]/20 relative">
+    <section id="experience" className="py-24 bg-card-dark/20 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4">
             Work Experience
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-linear-to-r from-blue-500 to-cyan-500 mx-auto rounded-full" />
         </div>
 
         <div className="relative border-l border-white/10 ml-4 md:ml-32 space-y-12">
@@ -47,7 +57,7 @@ export default function Experience() {
               className="relative pl-8 group"
             >
               {/* Timeline Indicator Node Pin */}
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#0a0a12] border-2 border-cyan-400 group-hover:bg-cyan-400 transition-colors duration-300 z-10" />
+              <div className="absolute -left-2.25 top-1.5 w-4 h-4 rounded-full bg-bg-dark border-2 border-cyan-400 group-hover:bg-cyan-400 transition-colors duration-300 z-10" />
 
               {/* Absolute side date element block on medium viewports */}
               <div className="hidden md:block absolute -left-36 top-1 text-sm font-mono text-gray-500 w-24 text-right">
@@ -65,6 +75,16 @@ export default function Experience() {
                 <h4 className="text-sm font-mono text-gray-400 mt-1 mb-3">
                   {item.company}
                 </h4>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/5 text-blue-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {item.details}
                 </p>

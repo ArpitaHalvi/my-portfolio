@@ -40,18 +40,13 @@ export default function Footer() {
           </a>
           <a
             href="https://leetcode.com/u/ArpitaCode/"
-            className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-gray-400 hover:text-blue-400 hover:bg-white/10 transition-all"
+            className="p-2.5 rounded-xl bg-white/5 border border-white/5 text-gray-400 hover:text-orange-400 transition-all"
           >
-            <svg
-              viewBox="0 0 24 24"
-              role="img"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-            >
-              <title>LeetCode</title>
-              <path d="M13.483 0a1.39 1.39 0 0 0-.726.233l-9.82 6.33a1.39 1.39 0 0 0-.34 1.956 1.39 1.39 0 0 0 1.957.34l9.82-6.33A1.39 1.39 0 0 0 14.714.57 1.39 1.39 0 0 0 13.483 0zm2.634 3.512a1.39 1.39 0 0 0-1.189.785L10.02 14.516a1.39 1.39 0 0 0 .736 1.845 1.39 1.39 0 0 0 1.845-.736l4.907-10.22a1.39 1.39 0 0 0-.671-1.83 1.39 1.39 0 0 0-.72-.063zm-10.557 6.788a1.39 1.39 0 0 0-1.926.342l-3.32 5.1a1.39 1.39 0 0 0 .343 1.926 1.39 1.39 0 0 0 1.925-.341l3.32-5.1a1.39 1.39 0 0 0-.342-1.927zM22.25 10.422a1.39 1.39 0 0 0-1.874.5l-5.63 9.42a1.39 1.39 0 0 0 .5 1.875 1.39 1.39 0 0 0 1.874-.5l5.63-9.42a1.39 1.39 0 0 0-.5-1.875zm-10.027 7.642a1.39 1.39 0 0 0-1.39 1.39v3.156a1.39 1.39 0 0 0 2.78 0v-3.156a1.39 1.39 0 0 0-1.39-1.39z" />
-            </svg>
+            <img
+              src="/leetcode-svgrepo-com.svg"
+              alt="Leetcode logo"
+              className="w-5 h-5 bg-gray-400 p-0.5 rounded-sm"
+            />
           </a>
         </div>
       </div>
